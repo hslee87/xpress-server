@@ -1,8 +1,8 @@
 const AppConfig = require("./app.config")
 
 module.exports = {
-    dbOptions: {
-        database: 'test',
+    // Sequelize options: http://docs.sequelizejs.com
+    sqlOption: {
         host: AppConfig.DB_CONN_INFO.host,
         username: AppConfig.DB_CONN_INFO.user,
         password: AppConfig.DB_CONN_INFO.password,
@@ -11,16 +11,17 @@ module.exports = {
         define: {
             underscored: true,
             freezeTableName: false,
-            paranoid: false,          // use soft delete
-            //--- don't add the timestamp attributes (updatedAt, createdAt)
+            // Turn off soft delete
+            paranoid: false,  
+            // Disable updatedAt, createdAt
             timestamps: false,
             createdAt: false,
             updatedAt: false,
         
-            charset: 'utf8mb4',
+            charset: 'utf8', // use utf8mb4 for emoji
             timezone: '+00:00',
             dialectOptions: {
-              collate: 'utf8_general_ci',
+              collate: 'utf8_unicode_ci',
             },
         },
         logging: function (str) {
@@ -32,6 +33,7 @@ module.exports = {
             idle: 10000
         }
     },
+    // 'sequelize-automate' options
     options: {
         type: "js",
         dir: "models",

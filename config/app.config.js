@@ -8,10 +8,10 @@ const os = require("os")
  * Local Config
  */
 const connInfoLocal = {
-    host: 'localhost',
-    user: 'dbuser',
-    password: 'dbpassword',
-    database: 'test_db',
+    host: process.env.DB_HOST || 'localhost',
+    user: process.env.DB_USER || 'dbuser',
+    password: process.env.DB_PASS ||'dbpassword',
+    database: process.env.DB_DATABASE || 'test',
 }
 
 // url = redis://username:password@hostname:port/db-number
