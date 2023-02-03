@@ -8,7 +8,7 @@
     "mocha": "node_modules/mocha/bin/mocha",
     "debug": "nodemon --ignore './data/' --inspect app.js",
     "local": "NODE_ENV=local nodemon --ignore './data/' --inspect app.js",
-    "automate": "sequelize-automate -c ./config/db-default.config.js",
+    "automate": "sequelize-automate -c ./config/sequelize-automate-default.js",
     "start": "node app.js"
   },
   "author": "",

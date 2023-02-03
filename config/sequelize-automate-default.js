@@ -1,11 +1,15 @@
 const AppConfig = require("./app.config")
 
 module.exports = {
-    // Sequelize options: http://docs.sequelizejs.com
-    sqlOption: {
+    // sequelize-automate dbOptions
+    // https://github.com/nodejh/sequelize-automate
+    //
+    dbOptions: {
+        // Sequelize options: http://docs.sequelizejs.com
         host: AppConfig.DB_CONN_INFO.host,
         username: AppConfig.DB_CONN_INFO.user,
         password: AppConfig.DB_CONN_INFO.password,
+        database: AppConfig.DB_CONN_INFO.database,
       
         dialect: "mysql", // 'mysql'|'sqlite'|'postgres'|'mssql',
         define: {
