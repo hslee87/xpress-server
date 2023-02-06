@@ -1,6 +1,6 @@
 // Importing mysql and csvtojson packages
 // Requiring module
-const sqlService = require('../services/sql.service');
+const sqlService = require('../services/sql-default.service');
 
 if (process.argv.length != 3) {
     // usage

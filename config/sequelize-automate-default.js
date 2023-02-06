@@ -40,9 +40,9 @@ module.exports = {
     // 'sequelize-automate' options
     options: {
         type: "js",
-        dir: "models",
+        dir: "application/models",
         camelCase: false, // Model name camel case. Default is false.
         fileNameCamelCase: false, // Model file name camel case. Default is false.
-        typesDir: 'models', // What directory to place the models' definitions (for typescript), default is the same with dir.
+        // typesDir: 'models', // What directory to place the models' definitions (for typescript), default is the same with dir.
     }
 }
